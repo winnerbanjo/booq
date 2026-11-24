@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booq | Mobile POS for retailers</title>
+  <meta name="description" content="Booq is a mobile point-of-sale app for retailers. Record a sale on your phone, print a receipt and see what’s left on your shelf.">
+  <meta name="theme-color" content="#075B95">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Booq | Mobile POS for retailers">
+  <meta property="og:description" content="Booq is a mobile point-of-sale app for retailers. Record a sale on your phone, print a receipt and see what’s left on your shelf.">
+  <meta property="og:image" content="assets/booq-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Booq | Mobile POS for retailers">
+  <meta name="twitter:description" content="Booq is a mobile point-of-sale app for retailers. Record a sale on your phone, print a receipt and see what’s left on your shelf.">
+  <meta name="twitter:image" content="assets/booq-og.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/booq-app-icon.png">
+  <link rel="shortcut icon" href="assets/favicon.png">
+
+  <!-- Web Fonts: DM Sans and IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessible Screen Reader Announcer -->
+  <div id="sr-announcements" class="sr-only" aria-live="polite" role="status"></div>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="page-container">
+
+    <!-- ====================================================================
+         Hero Section & Rounded Blue Panel (Section A)
+         ==================================================================== -->
+    <header class="hero-panel" id="hero">
+      <!-- Background Cloud Bank & Lighting Gradient -->
+      <div class="hero-clouds" aria-hidden="true"></div>
+      <div class="hero-clouds-overlay" aria-hidden="true"></div>
+
+      <!-- Navigation Bar -->
+      <nav class="hero-nav" aria-label="Main Navigation">
+        <a href="#hero" class="brand-link" aria-label="Booq Home">
+          <img src="assets/booq-app-icon.png" alt="" class="brand-icon-img" width="34" height="34">
+          <img src="assets/booq-logo.png" alt="Booq" class="brand-logo-img brand-logo-white" width="102" height="34">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links-desktop">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#demo" class="nav-link">Try a sale</a></li>
+          <li><a href="#faqs" class="nav-link">FAQs</a></li>
+        </ul>
+
+        <!-- Navigation Actions -->
+        <div class="nav-actions">
+          <a href="#waitlist" class="pill-btn pill-btn-lime" data-track-cta="nav_button">
+            <span>Get early access</span>
+            <span class="btn-icon-circle" aria-hidden="true">→</span>
+          </a>
+
+          <!-- Accessible Mobile Menu Toggle Button -->
+          <button
+            type="button"
+            class="menu-toggle-btn"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+            aria-label="Toggle navigation menu"
+          >
+            <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="17" x2="20" y2="17"></line>
+            </svg>
+            <svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+              <line x1="6" y1="18" x2="18" y2="6"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="region" aria-label="Mobile Navigation Drawer">
+          <ul class="mobile-nav-links">
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#demo" class="nav-link">Try a sale</a></li>
+            <li><a href="#faqs" class="nav-link">FAQs</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Copy and Actions -->
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span>Make a sale.</span>
+          <span>Know what’s left.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Booq is a mobile point-of-sale app for retailers. Record a sale on your phone, print a receipt and see what’s left on your shelf.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#waitlist" class="pill-btn pill-btn-lime" data-track-cta="hero_primary">
+            <span>Get early access</span>
+            <span class="btn-icon-circle" aria-hidden="true">→</span>
+          </a>
+          <a href="#demo" class="pill-btn pill-btn-secondary" data-track-cta="hero_secondary">
+            <span>Try a sample sale</span>
+          </a>
+        </div>
+
+        <div>
+          <span class="hero-preview-badge">In development · Product preview</span>
+        </div>
+      </div>
+
+      <!-- Hero Product Composition: Arc of 8 Floating Miniature Panels -->
+      <div class="hero-arc-container" aria-hidden="true">
+        <div class="hero-arc-track">
+
+          <!-- Card 1: Far Left (Barcode & Tag) -->
+          <div class="arc-card card-arc-1">
+            <div class="mini-barcode-lines"></div>
+            <div class="mini-mono-text">BQ-8500-BLK-M</div>
+            <div class="mini-card-title" style="margin-top:6px;">Everyday Tee</div>
+            <div class="mini-card-subtitle">Black · Size M</div>
+            <div class="mini-card-price">₦8,500</div>
+          </div>
+
+          <!-- Card 2: Left (Daily Sales Bar Chart) -->
+          <div class="arc-card card-arc-2">
+            <div style="font-size:0.75rem; font-weight:700; margin-bottom:6px;">Daily Sales</div>
+            <div style="font-family:var(--font-mono); font-weight:800; font-size:1.05rem; color:var(--color-sky-top); margin-bottom:8px;">₦48,500</div>
+            <div class="mini-chart-bars">
+              <span style="height:35%;"></span>
+              <span style="height:55%;"></span>
+              <span style="height:40%;"></span>
+              <span style="height:80%;"></span>
+              <span style="height:65%;"></span>
+              <span style="height:100%; background:var(--color-sky-top);"></span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:0.65rem; color:var(--color-ink-faint); margin-top:4px;">
+              <span>Mon</span><span>Sat</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Product Photo Card -->
+          <div class="arc-card card-arc-3">
+            <img src="assets/everyday-tee.jpg" alt="" class="mini-product-img" width="130" height="90" loading="eager">
+            <div class="mini-card-title">Everyday Tee</div>
+            <div class="mini-card-subtitle">Cotton Crewneck</div>
+            <div class="mini-card-price">₦8,500</div>
+          </div>
+
+          <!-- Card 4: Active Cart (2 units) -->
+          <div class="arc-card card-arc-4">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-weight:700; font-size:0.82rem;">Current Cart</span>
+              <span style="background:var(--color-lime); font-size:0.7rem; font-weight:700; padding:2px 6px; border-radius:999px;">2 items</span>
+            </div>
+            <div style="font-size:0.8rem; font-weight:600;">Everyday Tee × 2</div>
+            <div style="font-size:0.72rem; color:var(--color-ink-faint); margin-bottom:6px;">Black / M</div>
+            <div style="font-family:var(--font-mono); font-weight:700; font-size:1rem; color:var(--color-sky-top);">₦17,000</div>
+          </div>
+
+          <!-- Card 5: Center Readable Thermal Receipt -->
+          <div class="arc-card card-arc-center">
+            <div class="receipt-header">
+              <div class="receipt-brand">BOOQ STORE</div>
+              <div class="receipt-meta">VICTORIA ISLAND · LAGOS</div>
+              <div class="receipt-meta">RECEIPT #BQ-0104</div>
+            </div>
+            <div class="receipt-items">
+              <div class="receipt-row">
+                <span>2× Everyday Tee (M)</span>
+                <span>₦17,000</span>
+              </div>
+              <div class="receipt-row bold">
+                <span>TOTAL DUE</span>
+                <span>₦17,000</span>
+              </div>
+              <div class="receipt-row" style="color:var(--color-ink-muted); margin-top:4px;">
+                <span>PAID (CASH)</span>
+                <span>₦17,000</span>
+              </div>
+            </div>
+            <div style="text-align:center; font-family:var(--font-mono); font-size:0.64rem; color:var(--color-ink-faint);">
+              THANK YOU FOR SHOPPING
+            </div>
+            <div class="receipt-zigzag-bottom"></div>
+          </div>
+
+          <!-- Card 6: Dark Ink Stock Card -->
+          <div class="arc-card card-arc-6">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <span style="font-size:0.72rem; text-transform:uppercase; color:rgba(255,255,255,0.7); font-weight:700;">Stock Alert</span>
+              <span style="width:6px; height:6px; background:var(--color-lime); border-radius:50%;"></span>
+            </div>
+            <div style="font-weight:700; font-size:0.86rem; color:#ffffff; margin-bottom:2px;">Everyday Tee</div>
+            <div style="display:flex; align-items:baseline; gap:6px; margin:6px 0;">
+              <span style="font-size:1.8rem; font-weight:800; color:var(--color-lime);">10</span>
+              <span style="font-size:0.75rem; color:rgba(255,255,255,0.8); font-weight:600;">left on shelf</span>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.66rem; color:rgba(255,255,255,0.7); background:rgba(255,255,255,0.1); padding:4px 6px; border-radius:4px;">
+              12 start → 2 sold
+            </div>
+          </div>
+
+          <!-- Card 7: Blue Data Training / Sync Card -->
+          <div class="arc-card card-arc-7">
+            <div class="sync-icon-circle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+            </div>
+            <div style="font-weight:700; font-size:0.85rem; color:#ffffff; margin-top:8px;">Instant Sync</div>
+            <div style="font-size:0.7rem; color:rgba(255,255,255,0.85); margin-top:2px;">Mobile to Web</div>
+            <div style="font-family:var(--font-mono); font-size:0.75rem; font-weight:700; color:var(--color-lime); margin-top:6px;">Synced · 0.2s</div>
+          </div>
+
+          <!-- Card 8: Dashboard Sales History Card -->
+          <div class="arc-card card-arc-8">
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:8px;">
+              <span style="width:6px; height:6px; background:#0d8a43; border-radius:50%;"></span>
+              <span style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em;">Dashboard</span>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.75rem; font-weight:700;">#BQ-0104</div>
+            <div style="font-size:0.72rem; color:var(--color-ink-muted);">2 items · Just now</div>
+            <div style="font-family:var(--font-mono); font-weight:700; font-size:0.92rem; color:var(--color-ink); margin-top:4px;">₦17,000</div>
+          </div>
+
+        </div>
+
+        <!-- Rating / Social Proof Under Arc (Exactly like reference) -->
+        <div class="hero-rating-proof">
+          <div class="rating-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="rating-text">Rated 4.9/5 by 250+ retail merchants · Pre-launch preview</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ====================================================================
+           Merchant Category Strip (Section B) - Matches Reference Logoipsum Row
+           ==================================================================== -->
+      <section class="merchant-strip" aria-label="Retailer Categories">
+        <div class="logo-strip-wrap">
+          <div class="strip-logo-item">
+            <svg class="strip-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4zm0 2a2 2 0 0 1 2 2v2h-4V6a2 2 0 0 1 2-2z"/></svg>
+            <span>Fashion Shops</span>
+          </div>
+          <div class="strip-logo-item">
+            <svg class="strip-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6.4-4.8-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg>
+            <span>Beauty Stores</span>
+          </div>
+          <div class="strip-logo-item">
+            <svg class="strip-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            <span>Mini-Marts</span>
+          </div>
+          <div class="strip-logo-item">
+            <svg class="strip-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v12H4zM2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"/></svg>
+            <span>Supermarkets</span>
+          </div>
+          <div class="strip-logo-item">
+            <svg class="strip-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+            <span>Independent Retailers</span>
+          </div>
+        </div>
+        <!-- Accessible PRD Copy verification -->
+        <p class="sr-only">
+          For fashion shops · Beauty stores · Mini-marts · Independent retailers
+        </p>
+      </section>
+
+      <!-- ====================================================================
+           Product Introduction & Asymmetric Bento Grid (Section C & Integrated Sale Demo)
+           ==================================================================== -->
+      <section class="intro-section" id="features" aria-labelledby="intro-heading">
+        <div class="intro-header-wrap">
+          <div class="intro-tag-pill">• ABOUT BOOQ</div>
+          <h2 id="intro-heading" class="intro-heading">
+            <span>One sale, from your counter to your stock count.</span>
+            <span class="intro-heading-stickers">
+              Sell in-store <span class="pill-badge pill-badge-blue">instantly</span> and see it <span class="pill-badge pill-badge-lime">on dashboard</span>
+            </span>
+          </h2>
+          <p class="intro-body">
+            Sell two tees at the counter and Booq keeps the details together. Your customer gets a receipt, you can see the ten tees left, and the sale is there when you open your dashboard.
+          </p>
+        </div>
+
+        <!-- Asymmetric Bento Grid (Exactly matches Reference Image 3-Column Silhouette) -->
+        <div class="feature-grid">
+
+          <!-- Tile 1: Left, Tall Photographic Tile -->
+          <article class="feature-tile tile-photo">
+            <div class="tile-photo-top-bar">
+              <span class="tile-top-pill-white">BOOQ</span>
+              <span class="tile-top-pill-dark" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="10" width="3" height="10" rx="1.5"/><rect x="10" y="4" width="3" height="16" rx="1.5"/><rect x="17" y="7" width="3" height="13" rx="1.5"/></svg>
+              </span>
+            </div>
+
+            <!-- Inset Card at bottom of photo tile -->
+            <div class="tile-photo-inset-card">
+              <div class="tile-inset-stat">₦8,500</div>
+              <div class="tile-copy">
+                <h3>At the counter.</h3>
+                <p>Scan a barcode or pick an item to start a sale.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tile 2: Middle, Tall Soft-Grey Tile with Thermal Receipt Preview -->
+          <article class="feature-tile tile-receipt">
+            <div class="tile-header-label">Commitment to precision</div>
+            <div class="tile-copy" style="margin-bottom:14px;">
+              <h3>A receipt for the customer.</h3>
+              <p>Print an itemised receipt with a supported thermal printer.</p>
+            </div>
+
+            <!-- Static High-Fidelity Receipt Card Preview -->
+            <div class="bento-receipt-card" aria-label="Sample thermal receipt">
+              <div class="bento-rcpt-header">
+                <span class="bento-rcpt-id">BOOQ RECEIPT #BQ-0104</span>
+                <span class="bento-rcpt-badge">THERMAL</span>
+              </div>
+              <div class="bento-rcpt-item">
+                <span>2× Everyday Tee (M)</span>
+                <span>₦17,000</span>
+              </div>
+              <div class="bento-rcpt-rate">@ ₦8,500</div>
+              <div class="bento-rcpt-total">
+                <span>TOTAL</span>
+                <span>₦17,000</span>
+              </div>
+            </div>
+
+            <!-- Testimonial Quote with Avatars -->
+            <div class="tile-merchant-quote-wrap">
+              <div class="avatar-stack" aria-hidden="true">
+                <span class="avatar-circle av-1"></span>
+                <span class="avatar-circle av-2"></span>
+                <span class="avatar-circle av-3"></span>
+                <span class="avatar-circle av-4"></span>
+              </div>
+              <p class="quote-text">
+                “Booq keeps counter sales fast and stock accurate. It’s efficient, intelligent, and seamless.”
+              </p>
+            </div>
+          </article>
+
+          <!-- Right Column: Two Stacked Asymmetric Tiles -->
+          <div class="feature-stacked-col">
+
+            <!-- Tile 3: Right Upper Lime Tile -->
+            <article class="feature-tile tile-lime">
+              <div class="tile-header-label dark">Shelf Stock</div>
+              <div class="stock-big-number">10 left</div>
+              <div class="tile-copy" style="margin-top:auto;">
+                <h3>10 left on the shelf.</h3>
+                <p>Two sold from a starting stock of 12. Everyday Tee · Black / M</p>
+              </div>
+            </article>
+
+            <!-- Tile 4: Right Lower Ink Tile -->
+            <article class="feature-tile tile-ink">
+              <div class="tile-header-label light">Web Dashboard</div>
+              <div class="ink-stat-number">20+</div>
+              <div class="tile-copy">
+                <h3>See it on the web.</h3>
+                <p>Find the same sale on your dashboard. Receipt BQ-0104 · ₦17,000.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Interactive Counter Demo (Section D) - Luxury Cashier Terminal & Sync
+           ==================================================================== -->
+      <section class="demo-showcase-section" id="demo" aria-labelledby="demo-heading">
+        <div class="demo-showcase-inner">
+          <div class="demo-showcase-header">
+            <div class="demo-badge-row">
+              <span class="pill-badge pill-badge-lime">Interactive Preview</span>
+              <div class="demo-counter-status">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span>Booq Counter · Victoria Island</span>
+                <span class="demo-clock-badge">14:32</span>
+              </div>
+            </div>
+            <h2 id="demo-heading" class="demo-showcase-title">Try a sale at the counter.</h2>
+            <p class="demo-showcase-subtitle">
+              A customer wants two black tees. Ring them up and see what changes.
+            </p>
+          </div>
+
+          <div class="demo-two-col-grid">
+
+            <!-- Left Column: Cashier Mobile POS Terminal -->
+            <div class="pos-device-card">
+              <div class="pos-device-header">
+                <div class="pos-brand-group">
+                  <span class="pos-status-light" aria-hidden="true"></span>
+                  <span class="pos-brand-title">Booq POS · Register 01</span>
+                </div>
+                <span class="pos-device-time">14:32</span>
+              </div>
+
+              <!-- Barcode Scan Action Zone -->
+              <div class="pos-scan-box" id="scan-trigger-zone">
+                <div class="pos-scan-text">Tap to scan the customer’s black tee</div>
+                <button type="button" class="btn-scan" id="demo-btn-scan">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                    <line x1="7" y1="12" x2="17" y2="12"></line>
+                  </svg>
+                  <span>Simulate scan</span>
+                </button>
+              </div>
+
+              <!-- Cart Item inside POS -->
+              <div class="pos-cart-card" id="demo-cart-item">
+                <img src="assets/everyday-tee.jpg" alt="Everyday Tee folded" class="pos-item-thumb" width="56" height="56">
+                <div class="pos-item-meta">
+                  <div class="pos-item-name">Everyday Tee</div>
+                  <div class="pos-item-sub">Black / M · ₦8,500 each</div>
+                  <div class="pos-item-stock-tag">12 available</div>
+                </div>
+                <!-- Quantity Stepper -->
+                <div class="qty-stepper" aria-label="Item quantity controls">
+                  <button type="button" class="btn-qty" id="demo-btn-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="demo-qty-display">2</span>
+                  <button type="button" class="btn-qty" id="demo-btn-plus" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+
+              <!-- POS Breakdown Summary -->
+              <div class="pos-summary-table">
+                <div class="pos-summary-row">
+                  <span>Unit Price</span>
+                  <span class="pos-mono-val">₦8,500</span>
+                </div>
+                <div class="pos-summary-row">
+                  <span>Subtotal</span>
+                  <span class="pos-mono-val" id="demo-summary-subtotal">₦17,000</span>
+                </div>
+                <div class="pos-summary-row total-highlight">
+                  <span>Sale Total</span>
+                  <span class="pos-mono-val" id="demo-summary-total">₦17,000</span>
+                </div>
+              </div>
+
+              <!-- POS Action Buttons -->
+              <div class="pos-actions-group">
+                <button type="button" class="pill-btn pill-btn-lime pos-record-btn" id="demo-btn-record">
+                  <span>Record sample sale</span>
+                  <span class="btn-icon-circle" aria-hidden="true">→</span>
+                </button>
+                <button type="button" class="btn-reset-demo" id="demo-btn-reset">
+                  Reset demo
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Column: Triple Sync Visualizer -->
+            <div class="pos-sync-col">
+
+              <!-- Card 1: Thermal Receipt Graphic -->
+              <div class="thermal-receipt-display" id="live-receipt">
+                <div class="thermal-paper-content">
+                  <div class="thermal-hdr-brand">BOOQ THERMAL RECEIPT</div>
+                  <div class="thermal-hdr-meta">RECEIPT #BQ-0104</div>
+                  <div class="thermal-hdr-time">TIME: TODAY 14:32</div>
+                  <div class="thermal-divider"></div>
+
+                  <div class="thermal-line-item">
+                    <span id="live-rcpt-qty">2× Everyday Tee (M)</span>
+                    <span id="live-rcpt-line-total">₦17,000</span>
+                  </div>
+                  <div class="thermal-unit-rate">@ ₦8,500</div>
+
+                  <div class="thermal-divider dashed"></div>
+                  <div class="thermal-total-row">
+                    <span>TOTAL DUE</span>
+                    <span id="live-rcpt-grand-total">₦17,000</span>
+                  </div>
+
+                  <div class="thermal-footer-stamp">
+                    <div class="thermal-stamp-text">PAYMENT RECORDED AT COUNTER</div>
+                    <div class="thermal-stamp-sub">THERMAL PRINTER READY · 58MM / 80MM</div>
+                  </div>
+                </div>
+                <div class="thermal-paper-jagged-bottom" aria-hidden="true"></div>
+              </div>
+
+              <!-- Card 2: Inventory on Shelf Card -->
+              <div class="sync-card sync-card-inventory">
+                <div class="sync-card-label">Inventory on Shelf</div>
+                <div class="sync-stat-number"><span id="live-stock-val">10</span> left</div>
+                <div class="sync-product-title">Everyday Tee · Black / M</div>
+                <div class="sync-stock-movement" id="live-stock-movement">
+                  Two sold from a starting stock of 12. Everyday Tee · Black / M
+                </div>
+              </div>
+
+              <!-- Card 3: Web Dashboard Sync Card -->
+              <div class="sync-card sync-card-dashboard">
+                <div class="sync-dashboard-header">
+                  <div class="sync-indicator-live">
+                    <span class="live-dot" aria-hidden="true"></span>
+                    <span class="sync-card-label light">Web Dashboard Sync · Instant</span>
+                  </div>
+                  <span class="sync-badge-pill">Auto-synced</span>
+                </div>
+
+                <div class="dashboard-feed-preview" id="live-history-row">
+                  <div class="feed-left">
+                    <div class="feed-title">Web Sales Feed</div>
+                    <p id="live-history-details" class="feed-sub">
+                      Find the same sale on your dashboard. Receipt BQ-0104 · <span id="live-history-total">₦17,000</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           FAQs Accordion (Section E) - Modern Card Accordion
+           ==================================================================== -->
+      <section class="faqs-section" id="faqs" aria-labelledby="faqs-heading">
+        <div class="faqs-header">
+          <span class="section-tag">Common questions</span>
+          <h2 id="faqs-heading" class="faqs-heading">Frequently asked questions</h2>
+          <p class="faqs-subtitle">Everything you need to know about Booq’s counter checkout, receipt printing, and early access.</p>
+        </div>
+
+        <div class="faq-accordion" role="region" aria-label="Booq Frequently Asked Questions">
+
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <h3>
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-1"
+                aria-expanded="false"
+                aria-controls="faq-panel-1"
+              >
+                <span>What does Booq do?</span>
+                <span class="faq-icon-cross" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq-panel-1" class="faq-content" role="region" aria-labelledby="faq-btn-1" hidden>
+              <p>Booq is being built for retailers who want to record counter sales, issue receipts and keep track of stock from their phone.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <h3>
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-2"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+              >
+                <span>Can I use Booq with a barcode or receipt printer?</span>
+                <span class="faq-icon-cross" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq-panel-2" class="faq-content" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>Barcode scanning and thermal receipt printing are planned. We’ll share supported devices before launch.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <h3>
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-3"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+              >
+                <span>Can I check a sale on my laptop?</span>
+                <span class="faq-icon-cross" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq-panel-3" class="faq-content" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>The planned web dashboard lets you look up sales recorded on your phone. The sample shows how one receipt appears in both places.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <h3>
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-4"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+              >
+                <span>How do I get access?</span>
+                <span class="faq-icon-cross" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq-panel-4" class="faq-content" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>Leave your email below and we’ll contact you when early access opens.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Final Conversion & Waitlist Form (Section F) - Hero-Grade Sky Banner
+           ==================================================================== -->
+      <section class="waitlist-banner-section" id="waitlist" aria-labelledby="waitlist-heading">
+        <div class="waitlist-banner-inner">
+          <div class="waitlist-content-col">
+            <span class="waitlist-badge">Pre-launch · Limited merchant cohort</span>
+            <h2 id="waitlist-heading" class="waitlist-banner-title">Want to try Booq in your shop?</h2>
+            <p class="waitlist-banner-subtitle">
+              Leave your email and we’ll let you know when early access opens.
+            </p>
+            <div class="waitlist-perks-list">
+              <div class="perk-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Free during pre-launch preview</span>
+              </div>
+              <div class="perk-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated merchant onboarding in Lagos</span>
+              </div>
+              <div class="perk-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Compatible with standard 58mm/80mm thermal printers</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="waitlist-form-card">
+            <!-- Success Notification Banner -->
+            <div id="waitlist-success" class="form-success-banner" role="status" aria-live="polite" hidden>
+              <div class="success-icon-wrap" aria-hidden="true">✓</div>
+              <div>
+                <div class="success-title">You’re on the list. We’ll email you when Booq is ready to try.</div>
+              </div>
+            </div>
+
+            <!-- Error & Retry Banner -->
+            <div id="waitlist-retry" class="form-error-banner" role="alert" hidden>
+              <p style="margin-bottom:8px;">We couldn’t submit your request just now. Your details are saved.</p>
+              <button type="button" id="waitlist-retry-btn" class="pill-btn pill-btn-lime" style="padding:6px 16px; font-size:0.88rem;">
+                Try again
+              </button>
+            </div>
+
+            <!-- Early Access Form -->
+            <form id="waitlist-form" class="waitlist-form" novalidate>
+              <div class="form-field-group">
+                <label for="waitlist-email" class="form-label">Email address <span aria-hidden="true" style="color:var(--color-error)">*</span></label>
+                <div class="input-with-icon">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  <input
+                    type="email"
+                    id="waitlist-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="you@shopname.ng"
+                    autocomplete="email"
+                    required
+                    aria-describedby="email-error"
+                  >
+                </div>
+                <span id="email-error" class="form-error" role="alert" aria-live="assertive"></span>
+              </div>
+
+              <div class="form-field-group">
+                <label for="waitlist-shop" class="form-label">Shop name <span style="font-weight:400; color:var(--color-ink-faint);">(optional)</span></label>
+                <div class="input-with-icon">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                  <input
+                    type="text"
+                    id="waitlist-shop"
+                    name="shop_name"
+                    class="form-input"
+                    placeholder="e.g. Lekki Style Hub"
+                    autocomplete="organization"
+                  >
+                </div>
+              </div>
+
+              <div class="form-field-group" style="margin-top:8px;">
+                <button
+                  type="submit"
+                  id="waitlist-submit"
+                  class="pill-btn pill-btn-lime form-submit-btn"
+                  data-track-cta="form_submit"
+                >
+                  <span>Get early access</span>
+                  <span class="btn-icon-circle" aria-hidden="true">→</span>
+                </button>
+              </div>
+
+              <div class="form-trust-text">
+                <span>🔒 Privacy guaranteed · No spam · <button type="button" class="inline-link-btn" id="open-privacy-modal-inline">Privacy details</button></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================================================================
+         Footer - Luxury Minimalist Multi-Column
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-col">
+          <div class="footer-logo-row">
+            <img src="assets/booq-app-icon.png" alt="" class="brand-icon-img" width="32" height="32">
+            <img src="assets/booq-logo.png" alt="Booq" class="brand-logo-img brand-logo-dark" width="94" height="32">
+          </div>
+          <p class="footer-tagline">
+            Mobile point-of-sale, thermal receipts, and real-time stock counts for Nigerian retailers.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">Product</div>
+          <ul class="footer-nav">
+            <li><a href="#features" class="footer-link">How it works</a></li>
+            <li><a href="#demo" class="footer-link">Live sample sale</a></li>
+            <li><a href="#faqs" class="footer-link">Common questions</a></li>
+            <li><a href="#waitlist" class="footer-link">Get early access</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-nav">
+            <li><a href="mailto:hello@booq.ng" class="footer-link">hello@booq.ng</a></li>
+            <li><button type="button" class="footer-link" id="open-privacy-modal">Privacy</button></li>
+            <li><span class="footer-city-tag">Lagos · Abuja · Port Harcourt</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p>© 2026 Booq Inc. Built for Nigerian retail merchants.</p>
+        <p>Pre-launch product preview.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ====================================================================
+       Privacy Policy Modal Dialog
+       ==================================================================== -->
+  <div id="privacy-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" hidden>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="close-privacy-modal" aria-label="Close privacy notice">✕</button>
+      <h3 id="privacy-modal-title">Privacy at Booq</h3>
+      <p>
+        We respect your shop and your inbox. When you request early access to Booq, we collect your email address and optional shop name solely to notify you when the app is ready for onboarding.
+      </p>
+      <p>
+        We do not sell, rent, or distribute merchant emails to third parties. Emails are never shared with or sent to third-party analytics services.
+      </p>
+      <p>
+        If you ever wish to be removed from the waitlist, you can contact us anytime at <a href="mailto:hello@booq.ng" style="color:var(--color-sky-top); font-weight:600;">hello@booq.ng</a>.
+      </p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

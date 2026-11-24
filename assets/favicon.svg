@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="12" fill="#075B95"/>
+  <circle cx="24" cy="24" r="14" fill="#0098DC"/>
+  <!-- Stylized lowercase b representing counter receipt / tablet -->
+  <path d="M16 12v22a2 2 0 0 0 2 2h8a8 8 0 0 0 8-8 8 8 0 0 0-8-8h-6v-8a2 2 0 0 0-2-2h-2z" fill="#FFFFFF"/>
+  <circle cx="25" cy="28" r="4.5" fill="#CEFA50"/>
+</svg>
