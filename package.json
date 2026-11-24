@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Booq - Mobile POS for Nigerian Retailers",
   "scripts": {
-    "start": "node server.js",
+    "dev": "node scripts/server.js",
     "test": "node test.js"
   },
   "keywords": [

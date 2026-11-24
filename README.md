@@ -15,7 +15,9 @@ Open `index.html` directly in your browser of choice.
 
 ### Option 2: Local Static Server (Node)
 ```bash
-node server.js
+npm run dev
+# or
+node scripts/server.js
 ```
 Then navigate to `http://localhost:3000/`.
 
