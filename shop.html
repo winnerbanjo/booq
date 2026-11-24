@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booq Pulse One | Wireless Bluetooth Thermal Receipt Printer (₦60,000)</title>
+  <meta name="description" content="Meet Booq Pulse One by Nile. The futuristic Bluetooth 5.3 thermal receipt printer designed for Nigerian retail merchants. Zero ink, pocket-sized, 3-day battery, ₦60,000.">
+  <meta name="theme-color" content="#080b10">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Booq Pulse One | Bluetooth Thermal Receipt Printer">
+  <meta property="og:description" content="Instant Bluetooth pairing, zero ink, translucent cyber blue shell. Only ₦60,000 with nationwide delivery across Nigeria.">
+  <meta property="og:image" content="assets/printer/printer-perspective.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/booq-app-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body class="shop-body">
+
+  <!-- Background Cyber Atmosphere -->
+  <div class="cyber-glow-bg" aria-hidden="true">
+    <div class="glow-orb glow-cyan"></div>
+    <div class="glow-orb glow-lime"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="shop-container">
+
+    <!-- Header Navigation -->
+    <header class="shop-nav">
+      <div class="nav-left">
+        <a href="index.html" class="brand-link" aria-label="Booq Home">
+          <img src="assets/booq-app-icon.png" alt="" class="nav-icon" width="30" height="30">
+          <img src="assets/booq-logo.png" alt="Booq" class="nav-logo" width="86" height="28">
+        </a>
+        <span class="nav-hud-tag">HARDWARE LAB // 01</span>
+      </div>
+
+      <div class="nav-right">
+        <a href="index.html" class="nav-back-link">
+          <span class="back-arrow">←</span>
+          <span>App Landing Page</span>
+        </a>
+        <button type="button" class="btn-nav-order" id="btn-quick-order">
+          <span>Order Printer · ₦60,000</span>
+          <span class="btn-glow-dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="shop-main">
+
+      <!-- ====================================================================
+           HERO PRODUCT SHOWCASE: Interactive 360 Gallery & Telemetry
+           ==================================================================== -->
+      <section class="product-hero-section">
+        
+        <!-- Left: Interactive Gallery -->
+        <div class="gallery-col">
+          <div class="gallery-stage" id="gallery-stage">
+            
+            <!-- Angle HUD Tag -->
+            <div class="stage-hud-badge">
+              <span class="hud-dot"></span>
+              <span id="current-angle-label">ANGLE 01 // PERSPECTIVE 3/4</span>
+            </div>
+
+            <!-- Bluetooth Link Pulse Indicator -->
+            <div class="bluetooth-status-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="bt-icon">
+                <path d="m7 7 10 10-5 5V2l5 5L7 17"></path>
+              </svg>
+              <span>BT 5.3 LE ACTIVE</span>
+            </div>
+
+            <!-- Main Interactive Display Image -->
+            <div class="main-image-wrap">
+              <img
+                src="assets/printer/printer-perspective.png"
+                alt="Booq Pulse One Bluetooth Thermal Printer"
+                id="main-product-img"
+                class="stage-main-img"
+                width="640"
+                height="640"
+              >
+
+              <!-- Animated Thermal Paper Rollout Simulation Layer -->
+              <div class="live-print-overlay" id="live-print-overlay" hidden>
+                <div class="simulated-receipt-paper">
+                  <div class="paper-cut-line"></div>
+                  <div class="sim-rcpt-header">BOOQ BY NILE</div>
+                  <div class="sim-rcpt-meta">RECEIPT #BQ-9942 · WIRELESS BT</div>
+                  <div class="sim-rcpt-divider"></div>
+                  <div class="sim-rcpt-row">
+                    <span>1× Pulse Thermal 58mm</span>
+                    <span>₦60,000</span>
+                  </div>
+                  <div class="sim-rcpt-row">
+                    <span>3× Thermal Paper Rolls</span>
+                    <span>FREE</span>
+                  </div>
+                  <div class="sim-rcpt-row">
+                    <span>Nationwide Delivery</span>
+                    <span>₦0</span>
+                  </div>
+                  <div class="sim-rcpt-divider dashed"></div>
+                  <div class="sim-rcpt-total">
+                    <span>TOTAL</span>
+                    <span>₦60,000</span>
+                  </div>
+                  <div class="sim-rcpt-stamp">✓ CONNECTED VIA BLUETOOTH</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery Controls: Test Print Trigger & Zoom -->
+            <div class="stage-footer-bar">
+              <button type="button" class="btn-stage-action" id="btn-trigger-print">
+                <span class="action-icon">⚡</span>
+                <span id="btn-print-text">Trigger Live Print Test</span>
+              </button>
+              <div class="specs-mini-chips">
+                <span class="mini-chip">58MM PAPER</span>
+                <span class="mini-chip">ZERO INK</span>
+                <span class="mini-chip">TYPE-C FAST CHARGE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thumbnail Strip (All 8 Angles) -->
+          <div class="gallery-thumbs-track" role="tablist" aria-label="Product image angles">
+            <button type="button" class="thumb-btn is-active" data-src="assets/printer/printer-perspective.png" data-label="ANGLE 01 // PERSPECTIVE 3/4" aria-label="Perspective View">
+              <img src="assets/printer/printer-perspective.png" alt="" width="68" height="68">
+            </button>
+            <button type="button" class="thumb-btn" data-src="assets/printer/printer-printing.png" data-label="ANGLE 02 // PRINTING RECEIPT ACTION" aria-label="Printing View">
+              <img src="assets/printer/printer-printing.png" alt="" width="68" height="68">
+            </button>
+            <button type="button" class="thumb-btn" data-src="assets/printer/printer-front.png" data-label="ANGLE 03 // FRONT CONTROL INTERFACE" aria-label="Front View">
+              <img src="assets/printer/printer-front.png" alt="" width="68" height="68">
+            </button>
+            <button type="button" class="thumb-btn" data-src="assets/printer/printer-top.png" data-label="ANGLE 04 // TRANSLUCENT DOME & ROLL" aria-label="Top View">
+              <img src="assets/printer/printer-top.png" alt="" width="68" height="68">
+            </button>
+            <button type="button" class="thumb-btn" data-src="assets/printer/printer-side-port.png" data-label="ANGLE 05 // TYPE-C CHARGING PORT" aria-label="Side Port View">
+              <img src="assets/printer/printer-side-port.png" alt="" width="68" height="68">
+            </button>
+            <button type="button" class="thumb-btn" data-src="assets/printer/printer-side.png" data-label="ANGLE 06 // ERGONOMIC CONTOUR PROFILE" aria-label="Side Profile">
+              <img src="assets/printer/printer-side.png" alt="" width="68" height="68">
+            </button>
+            <button type="button" class="thumb-btn" data-src="assets/printer/printer-back.png" data-label="ANGLE 07 // PRECISION HINGE ASSEMBLY" aria-label="Back View">
+              <img src="assets/printer/printer-back.png" alt="" width="68" height="68">
+            </button>
+            <button type="button" class="thumb-btn" data-src="assets/printer/printer-bottom.png" data-label="ANGLE 08 // ANTI-SLIP BASE & CELL" aria-label="Base View">
+              <img src="assets/printer/printer-bottom.png" alt="" width="68" height="68">
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Telemetry Specs & Purchasing Terminal -->
+        <div class="purchase-col">
+          <div class="purchase-card">
+            
+            <!-- Series Meta -->
+            <div class="product-badge-row">
+              <span class="cyber-pill cyber-pill-cyan">CYBERPUNK ED. · HARDWARE SERIES 01</span>
+              <span class="stock-live-pill">
+                <span class="pulsing-green-dot"></span>
+                <span>IN STOCK · LAGOS WAREHOUSE</span>
+              </span>
+            </div>
+
+            <h1 class="product-title">Booq Pulse One</h1>
+            <p class="product-subtitle">
+              Futuristic Pocket Bluetooth Thermal Printer (by Nile). Built exclusively for mobile-first retail merchants in Nigeria.
+            </p>
+
+            <!-- Price Breakdown Box -->
+            <div class="price-telemetry-box">
+              <div class="price-row">
+                <div class="current-price-wrap">
+                  <span class="currency">₦</span>
+                  <span class="price-number" id="display-price">60,000</span>
+                </div>
+                <div class="price-strikethrough-wrap">
+                  <span class="original-price">₦85,000</span>
+                  <span class="discount-badge">SAVE 29%</span>
+                </div>
+              </div>
+              <div class="tax-note">✓ Flat retail price · Includes 3 starter rolls + USB-C cable + 1-Year Warranty</div>
+            </div>
+
+            <!-- Key Spec Highlights -->
+            <div class="spec-matrix-grid">
+              <div class="spec-cell">
+                <div class="spec-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 7 10 10-5 5V2l5 5L7 17"></path></svg>
+                </div>
+                <div class="spec-label">Connectivity</div>
+                <div class="spec-val">Bluetooth 5.3 LE</div>
+              </div>
+
+              <div class="spec-cell">
+                <div class="spec-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                </div>
+                <div class="spec-label">Print Speed</div>
+                <div class="spec-val">90 mm/second</div>
+              </div>
+
+              <div class="spec-cell">
+                <div class="spec-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10M7 12h10M7 17h6"/></svg>
+                </div>
+                <div class="spec-label">Thermal Head</div>
+                <div class="spec-val">58mm Zero-Ink</div>
+              </div>
+
+              <div class="spec-cell">
+                <div class="spec-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="10" x="2" y="7" rx="2"/><line x1="22" x2="22" y1="11" y2="13"/></svg>
+                </div>
+                <div class="spec-label">Battery Endurance</div>
+                <div class="spec-val">3 Days / 500+ Rcpts</div>
+              </div>
+            </div>
+
+            <!-- Quantity Selector & Total Output -->
+            <div class="order-controls-row">
+              <div class="qty-control-box">
+                <label for="order-qty" class="qty-label">QUANTITY</label>
+                <div class="qty-stepper-cyber">
+                  <button type="button" class="btn-qty-cyber" id="btn-qty-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-num-cyber" id="qty-count">1</span>
+                  <button type="button" class="btn-qty-cyber" id="btn-qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+
+              <div class="total-calc-box">
+                <div class="total-calc-label">ORDER TOTAL</div>
+                <div class="total-calc-amount" id="total-calc-display">₦60,000</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="purchase-actions-group">
+              <button type="button" class="btn-cyber-primary" id="btn-open-checkout">
+                <span>Proceed to Order — <span id="btn-cta-price">₦60,000</span></span>
+                <span class="cta-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button type="button" class="btn-cyber-secondary" id="btn-demo-receipt">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
+                <span>Simulate Print on Phone</span>
+              </button>
+            </div>
+
+            <!-- Guarantee Badges -->
+            <div class="trust-strip">
+              <div class="trust-item">
+                <span class="trust-icon">🛡️</span>
+                <span>1-Year Nigerian Warranty</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon">⚡</span>
+                <span>Same-day Lagos Delivery</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon">🔄</span>
+                <span>Plug &amp; Play with Booq</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ====================================================================
+           FUTURISTIC ENGINEERING FEATURES (Deep Dive Grid)
+           ==================================================================== -->
+      <section class="features-deepdive-section">
+        <div class="section-hud-header">
+          <span class="cyber-tag">// HARDWARE ARCHITECTURE</span>
+          <h2 class="section-title">Engineered for Counter Speed</h2>
+          <p class="section-subtitle">No ink. No messy ribbons. Instant pairing straight from your phone.</p>
+        </div>
+
+        <div class="deepdive-grid">
+          
+          <!-- Card 1 -->
+          <article class="deepdive-card">
+            <div class="card-corner-accent tl"></div>
+            <div class="card-corner-accent tr"></div>
+            <div class="card-icon-glow">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 7 10 10-5 5V2l5 5L7 17"></path></svg>
+            </div>
+            <div class="card-hud-id">SYS.01 // CONNECTIVITY</div>
+            <h3>Instant Auto-Pair Bluetooth 5.3</h3>
+            <p>
+              Tap to print in under 0.2 seconds. Compatible with iPhone, Android, and laptops via Web Bluetooth. No drivers or technical setup required.
+            </p>
+            <div class="card-metric">Latency: &lt; 200ms</div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="deepdive-card">
+            <div class="card-corner-accent tl"></div>
+            <div class="card-corner-accent tr"></div>
+            <div class="card-icon-glow">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></svg>
+            </div>
+            <div class="card-hud-id">SYS.02 // OPTICAL SHELL</div>
+            <h3>Translucent Acoustic Cyan Dome</h3>
+            <p>
+              Aerospace-grade polycarbonate translucent blue lid lets you check remaining paper stock in real time without opening the device.
+            </p>
+            <div class="card-metric">Material: Impact-Resistant PC</div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="deepdive-card">
+            <div class="card-corner-accent tl"></div>
+            <div class="card-corner-accent tr"></div>
+            <div class="card-icon-glow">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="card-hud-id">SYS.03 // THERMAL ENGINE</div>
+            <h3>High-Density Japanese Thermal Head</h3>
+            <p>
+              Prints crisp text, itemized totals, barcodes, and dynamic QR codes at 203 DPI resolution. Zero carbon footprint, zero toner waste.
+            </p>
+            <div class="card-metric">Rated Life: 50 Kilometres of paper</div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="deepdive-card">
+            <div class="card-corner-accent tl"></div>
+            <div class="card-corner-accent tr"></div>
+            <div class="card-icon-glow">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="10" x="2" y="7" rx="2"/><line x1="22" x2="22" y1="11" y2="13"/></svg>
+            </div>
+            <div class="card-hud-id">SYS.04 // POWER CELL</div>
+            <h3>2000mAh Cell + USB-C Fast Charge</h3>
+            <p>
+              Keep selling even when PHCN cuts the power. Recharges in 90 minutes via any standard phone charger or power bank.
+            </p>
+            <div class="card-metric">Standby: 7 Days · Continuous: 500+ sales</div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           UNBOXING & PACKAGE CONTENTS
+           ==================================================================== -->
+      <section class="unboxing-section">
+        <div class="unboxing-inner">
+          <div class="unboxing-content">
+            <span class="cyber-tag">// COMPLETE MERCH PACK</span>
+            <h2>What’s in the Box</h2>
+            <p>Everything you need to issue your first counter receipt right out of the box.</p>
+
+            <ul class="box-items-list">
+              <li>
+                <span class="check-box-icon">✓</span>
+                <div>
+                  <strong>1× Booq Pulse One Bluetooth Printer</strong>
+                  <p>Cyber black with translucent electric cyan dome</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-box-icon">✓</span>
+                <div>
+                  <strong>3× Premium 58mm Thermal Paper Rolls</strong>
+                  <p>BPA-free high contrast paper (lasts 5 years without fading)</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-box-icon">✓</span>
+                <div>
+                  <strong>1× Braided USB-C Fast-Charging Cable</strong>
+                  <p>Durable 1.2m reinforced nylon braid</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-box-icon">✓</span>
+                <div>
+                  <strong>1× Merchant Quick-Start Telemetry Card</strong>
+                  <p>Step-by-step pairing with Booq POS app</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-box-icon">✓</span>
+                <div>
+                  <strong>1× 12-Month Official Nigerian Warranty Certificate</strong>
+                  <p>Instant replacement in Lagos, Abuja &amp; PH</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="unboxing-visual-card">
+            <img src="assets/printer/printer-printing.png" alt="Booq Pulse Unboxing" class="unboxing-img" width="500" height="500">
+            <div class="unboxing-pill-badge">PLUG &amp; PRINT · READY IN 60 SECONDS</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           FULL TECHNICAL SPECIFICATIONS TABLE
+           ==================================================================== -->
+      <section class="specs-table-section">
+        <div class="section-hud-header">
+          <span class="cyber-tag">// TELEMETRY &amp; BENCHMARKS</span>
+          <h2 class="section-title">Technical Specifications</h2>
+        </div>
+
+        <div class="specs-table-wrap">
+          <table class="specs-table">
+            <thead>
+              <tr>
+                <th scope="col">Parameter</th>
+                <th scope="col">Specification</th>
+                <th scope="col">Merchant Benefit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Model</strong></td>
+                <td>Booq Pulse One (by Nile)</td>
+                <td>Official Booq hardware guarantee</td>
+              </tr>
+              <tr>
+                <td><strong>Retail Price</strong></td>
+                <td><span class="table-price">₦60,000</span></td>
+                <td>Lowest total cost of ownership (no ink ever)</td>
+              </tr>
+              <tr>
+                <td><strong>Print Method</strong></td>
+                <td>Direct Thermal (Thermal Sensitive)</td>
+                <td>100% inkless, quiet &amp; smudge-proof</td>
+              </tr>
+              <tr>
+                <td><strong>Paper Width</strong></td>
+                <td>58mm (2.28 in) Standard</td>
+                <td>Universally available across all Nigerian markets</td>
+              </tr>
+              <tr>
+                <td><strong>Print Speed</strong></td>
+                <td>90mm / second</td>
+                <td>Receipt handed to customer in under 1 second</td>
+              </tr>
+              <tr>
+                <td><strong>Resolution</strong></td>
+                <td>203 DPI (8 dots/mm)</td>
+                <td>Sharp logos, clear naira totals, scannable QR codes</td>
+              </tr>
+              <tr>
+                <td><strong>Wireless Connectivity</strong></td>
+                <td>Bluetooth 5.3 Low Energy (BLE)</td>
+                <td>Auto-reconnects when merchant walks into store</td>
+              </tr>
+              <tr>
+                <td><strong>Wired Port</strong></td>
+                <td>USB Type-C (Power &amp; Data)</td>
+                <td>Charge with the same cable as your Android phone</td>
+              </tr>
+              <tr>
+                <td><strong>Battery</strong></td>
+                <td>2000mAh Rechargeable Lithium-ion</td>
+                <td>Operates through power outages without stopping</td>
+              </tr>
+              <tr>
+                <td><strong>Weight &amp; Dimensions</strong></td>
+                <td>215g · 118 × 82 × 50 mm</td>
+                <td>Fits into apron pocket or rests on small counter</td>
+              </tr>
+              <tr>
+                <td><strong>App Compatibility</strong></td>
+                <td>Booq Mobile POS (iOS &amp; Android) + Web</td>
+                <td>Instant one-tap print from cart screen</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           FINAL CALL TO ACTION BANNER
+           ==================================================================== -->
+      <section class="bottom-cta-banner">
+        <div class="cta-banner-card">
+          <span class="cyber-pill cyber-pill-lime">READY TO DEPLOY</span>
+          <h2>Equip Your Counter with Booq Pulse</h2>
+          <p>Order today at the special ₦60,000 pre-order rate. Nationwide delivery to your shop door.</p>
+          <div class="banner-cta-group">
+            <button type="button" class="btn-cyber-primary lg" id="btn-banner-order">
+              <span>Order Booq Pulse One — ₦60,000</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </button>
+            <a href="index.html" class="btn-cyber-ghost">
+              Back to Booq Software
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="shop-footer">
+      <div class="shop-footer-row">
+        <div class="footer-left">
+          <img src="assets/booq-app-icon.png" alt="" width="26" height="26">
+          <img src="assets/booq-logo.png" alt="Booq" width="80" height="26">
+          <span class="footer-copy-text">© 2026 Booq Technologies Inc. Built for Nigerian Retailers.</span>
+        </div>
+        <div class="footer-right">
+          <a href="index.html" class="footer-link">Software</a>
+          <a href="mailto:hello@booq.ng" class="footer-link">hello@booq.ng</a>
+          <span class="footer-state-badge">Lagos · Abuja · Port Harcourt</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ====================================================================
+       INTERACTIVE ORDER CHECKOUT MODAL
+       ==================================================================== -->
+  <div id="checkout-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="cyber-modal-card">
+      <button type="button" class="modal-close-btn" id="btn-close-modal" aria-label="Close modal">✕</button>
+
+      <div class="modal-header-cyber">
+        <div class="modal-hud-tag">// ORDER TERMINAL</div>
+        <h3 id="modal-title">Order Booq Pulse One</h3>
+        <p>Complete your delivery details. We’ll deliver directly to your store.</p>
+      </div>
+
+      <!-- Order Summary Strip -->
+      <div class="modal-order-summary">
+        <div class="summary-item-left">
+          <img src="assets/printer/printer-perspective.png" alt="" class="modal-thumb" width="48" height="48">
+          <div>
+            <div class="modal-item-name">Booq Pulse One (58mm)</div>
+            <div class="modal-item-sub">Qty: <span id="modal-summary-qty">1</span> unit(s) · 3 Rolls included</div>
+          </div>
+        </div>
+        <div class="summary-item-price" id="modal-summary-total">₦60,000</div>
+      </div>
+
+      <!-- Form -->
+      <form id="printer-order-form" class="cyber-order-form" novalidate>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="order-name">Your Full Name <span class="required">*</span></label>
+            <input type="text" id="order-name" name="name" required placeholder="e.g. Tunde Adebayo" class="cyber-input">
+          </div>
+
+          <div class="form-group">
+            <label for="order-phone">Phone Number (WhatsApp) <span class="required">*</span></label>
+            <input type="tel" id="order-phone" name="phone" required placeholder="e.g. 0803 123 4567" class="cyber-input">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="order-shop">Shop Name / Business <span class="required">*</span></label>
+            <input type="text" id="order-shop" name="shop" required placeholder="e.g. Adebayo Luxury Fabrics" class="cyber-input">
+          </div>
+
+          <div class="form-group">
+            <label for="order-state">Delivery State <span class="required">*</span></label>
+            <select id="order-state" name="state" required class="cyber-input">
+              <option value="Lagos">Lagos (Same-Day / Next-Day)</option>
+              <option value="Abuja">Abuja (24–48 hrs)</option>
+              <option value="Rivers">Rivers / Port Harcourt (24–48 hrs)</option>
+              <option value="Oyo">Oyo / Ibadan (24 hrs)</option>
+              <option value="Kano">Kano (48 hrs)</option>
+              <option value="Delta">Delta / Asaba / Warri (48 hrs)</option>
+              <option value="Enugu">Enugu (48 hrs)</option>
+              <option value="Other">Other State in Nigeria</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="order-address">Shop / Delivery Address <span class="required">*</span></label>
+          <input type="text" id="order-address" name="address" required placeholder="e.g. Shop 14, Block B, Tejuosho Ultra-Modern Market, Yaba, Lagos" class="cyber-input">
+        </div>
+
+        <div class="form-group">
+          <label for="order-notes">Additional Roll Bundle</label>
+          <div class="checkbox-roll-option">
+            <input type="checkbox" id="add-rolls" name="add_rolls">
+            <label for="add-rolls">Add 10 Extra Premium Thermal Paper Rolls (+₦5,000)</label>
+          </div>
+        </div>
+
+        <!-- Payment Method Choice -->
+        <div class="form-group">
+          <label>Payment Preference</label>
+          <div class="payment-pills-row">
+            <label class="payment-pill-label">
+              <input type="radio" name="payment_method" value="pod" checked>
+              <span>Pay on Delivery (Lagos &amp; Pickups)</span>
+            </label>
+            <label class="payment-pill-label">
+              <input type="radio" name="payment_method" value="transfer">
+              <span>Direct Bank Transfer</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-cyber-primary submit-order-btn" id="btn-submit-order">
+          <span>Confirm Hardware Order — <span id="modal-submit-price">₦60,000</span></span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </button>
+
+        <p class="modal-guarantee-note">
+          🔒 Zero-risk guarantee. Pay on delivery available in Lagos. Free replacement warranty.
+        </p>
+      </form>
+
+      <!-- Success Screen -->
+      <div id="order-success-screen" class="order-success-card" hidden>
+        <div class="success-check-badge">✓</div>
+        <h4>Order Dispatched to Dispatch Team</h4>
+        <div class="order-ref-code">ORDER #<span id="confirmed-order-id">BQ-PRNT-8821</span></div>
+        <p>
+          Thank you! We have received your order for the <strong>Booq Pulse One</strong> printer. Our Lagos logistics team will call your phone number shortly to verify delivery time.
+        </p>
+        <div class="success-actions">
+          <button type="button" class="btn-cyber-primary" id="btn-finish-order">
+            Close &amp; Return to Shop
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="shop.js"></script>
+</body>
+</html>
