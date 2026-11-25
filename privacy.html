@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · Booq</title>
+  <meta name="description" content="Privacy Policy for Booq (booq.africa). Learn how Booq protects merchant data, counter transactions, stock records, and personal information across Nigeria.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://booq.africa/privacy">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy · Booq">
+  <meta property="og:description" content="How Booq protects merchant counter transactions, customer receipts, and business privacy. Zero spam, zero third-party data sales.">
+  <meta property="og:image" content="assets/booq-og.jpg">
+  <meta property="og:url" content="https://booq.africa/privacy">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/booq-app-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .privacy-page-wrapper {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .privacy-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0 32px;
+      border-bottom: 1px solid var(--color-card-border);
+      margin-bottom: 40px;
+    }
+
+    .privacy-nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .privacy-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .privacy-nav-link {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--color-ink-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .privacy-nav-link:hover {
+      color: var(--color-sky-bottom);
+    }
+
+    .privacy-hero {
+      margin-bottom: 48px;
+    }
+
+    .privacy-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-sky-top);
+      background: rgba(0, 152, 220, 0.1);
+      border: 1px solid rgba(0, 152, 220, 0.25);
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+
+    .privacy-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 16px;
+    }
+
+    .privacy-subtitle {
+      font-size: 1.15rem;
+      color: var(--color-ink-muted);
+      line-height: 1.6;
+    }
+
+    .privacy-meta-strip {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-top: 16px;
+      margin-top: 16px;
+      border-top: 1px solid var(--color-card-border);
+      font-size: 0.85rem;
+      color: var(--color-ink-faint);
+      font-family: var(--font-mono);
+    }
+
+    .privacy-content-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--tile-radius);
+      padding: clamp(24px, 4vw, 48px);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .privacy-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .privacy-section h2 .sec-num {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-sky-bottom);
+    }
+
+    .privacy-section p {
+      font-size: 0.98rem;
+      color: var(--color-ink-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .privacy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-section ul {
+      margin: 12px 0 16px 20px;
+      color: var(--color-ink-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .privacy-section li {
+      margin-bottom: 6px;
+    }
+
+    .privacy-highlight-box {
+      background: var(--color-soft-grey);
+      border-left: 4px solid var(--color-sky-bottom);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .privacy-highlight-box strong {
+      color: var(--color-ink);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .privacy-footer-nav {
+      margin-top: 60px;
+      padding-top: 32px;
+      border-top: 1px solid var(--color-card-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: var(--color-ink-faint);
+    }
+
+    .privacy-footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .privacy-footer-links a {
+      color: var(--color-ink-muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    .privacy-footer-links a:hover {
+      color: var(--color-sky-bottom);
+    }
+
+    @media (max-width: 640px) {
+      .privacy-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .privacy-nav-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .privacy-footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="privacy-page-wrapper">
+
+    <!-- Navigation Header -->
+    <header class="privacy-nav">
+      <a href="/" class="privacy-nav-brand" aria-label="Booq Home">
+        <img src="assets/booq-app-icon.png" alt="" width="32" height="32" style="border-radius:8px;">
+        <img src="assets/booq-logo.png" alt="Booq" width="88" height="28" style="height:28px; width:auto;">
+      </a>
+
+      <div class="privacy-nav-actions">
+        <a href="/" class="privacy-nav-link">← Software App</a>
+        <a href="shop.html" class="privacy-nav-link">Hardware Printer (₦60k)</a>
+        <a href="/#waitlist" class="pill-btn pill-btn-lime" style="padding:8px 18px; font-size:0.85rem;">
+          <span>Get early access</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      
+      <!-- Hero -->
+      <section class="privacy-hero">
+        <span class="privacy-badge">Official Trust &amp; Privacy Statement</span>
+        <h1 class="privacy-title">Privacy Policy</h1>
+        <p class="privacy-subtitle">
+          At Booq (booq.africa), we build retail software and counter hardware for Nigerian merchants. We treat your shop’s sales data, inventory counts, and customer phone numbers with the highest standard of confidentiality.
+        </p>
+        <div class="privacy-meta-strip">
+          <span>Effective Date: 24 November 2026</span>
+          <span>•</span>
+          <span>Jurisdiction: Federal Republic of Nigeria (NDPR / NDPA 2023)</span>
+        </div>
+      </section>
+
+      <!-- Main Policy Document -->
+      <article class="privacy-content-card">
+
+        <!-- 1. Introduction -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">01.</span> Introduction &amp; Scope</h2>
+          <p>
+            This Privacy Policy governs your use of <strong>Booq</strong>, accessible via <strong>https://booq.africa</strong>, <strong>https://booq-jet.vercel.app</strong>, and associated mobile and web point-of-sale applications operated by Booq Technologies Inc. (“Booq”, “we”, “our”, or “us”).
+          </p>
+          <p>
+            This policy explains what information we collect when you visit our website, apply for early merchant access, order counter hardware (such as the Booq Pulse One thermal printer), or use the Booq counter sales system.
+          </p>
+        </section>
+
+        <!-- 2. Core Commitment -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">02.</span> Our Zero-Spam &amp; Zero-Brokerage Promise</h2>
+          <div class="privacy-highlight-box">
+            <strong>🔒 The Merchant Guarantee:</strong>
+            We will never sell, rent, monetize, or trade your email, phone number, inventory data, or counter sales receipts with third-party advertisers or data brokers.
+          </div>
+          <p>
+            Counter sales records, stock counts, and customer details exist solely to run your store. Your data belongs entirely to your business.
+          </p>
+        </section>
+
+        <!-- 3. Information We Collect -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">03.</span> Information We Collect</h2>
+          <p>We only collect information necessary to deliver our products and services:</p>
+          <ul>
+            <li>
+              <strong>Early Access Waitlist:</strong> When you submit our early access form, we collect your email address, and optionally your shop name and merchandise category (e.g., fashion, beauty, electronics).
+            </li>
+            <li>
+              <strong>Hardware Orders:</strong> When you order hardware (such as the Booq Pulse One thermal printer), we collect your full name, phone number (for delivery dispatch &amp; WhatsApp coordination), shop name, Nigerian state, delivery address, and payment preference.
+            </li>
+            <li>
+              <strong>Counter Point-of-Sale Data:</strong> When using Booq POS, transactions (item, quantity, naira price, time, receipt ID) and inventory counts are maintained on your device and synchronized securely to your merchant dashboard.
+            </li>
+            <li>
+              <strong>Technical Telemetry:</strong> Anonymized crash logs and aggregate browser metrics to ensure our application runs fast on Android, iOS, and desktop browsers across Nigerian mobile networks.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. How We Use Your Information -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">04.</span> How We Use Your Information</h2>
+          <p>Your information is used strictly to:</p>
+          <ul>
+            <li>Notify you when Booq is ready for your shop onboarding.</li>
+            <li>Fulfill and dispatch physical hardware orders to your store address across Lagos, Abuja, Port Harcourt, and nationwide.</li>
+            <li>Power instant receipt generation, shelf stock decrements, and sales dashboard reconciliation.</li>
+            <li>Provide merchant customer support via WhatsApp or email when you request technical assistance.</li>
+            <li>Maintain platform security and protect against fraudulent transactions.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Third-Party Service Providers -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">05.</span> Third-Party Service Providers</h2>
+          <p>
+            We partner with a limited number of verified technical infrastructure providers:
+          </p>
+          <ul>
+            <li><strong>Payment Gateways:</strong> When processing online payments, transactions are handled by licensed Nigerian payment processors (such as Paystack or Flutterwave). We do not store raw debit card numbers or banking passwords on our servers.</li>
+            <li><strong>Logistics Partners:</strong> For hardware deliveries, customer shipping information (name, phone, address) is shared with verified dispatch riders and courier partners solely to execute package delivery.</li>
+            <li><strong>Hosting &amp; Edge Infrastructure:</strong> Encrypted hosting via Vercel and secure cloud storage to serve the fastest experience on 3G and 4G connections.</li>
+          </ul>
+        </section>
+
+        <!-- 6. Data Security & Local-First Architecture -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">06.</span> Data Security &amp; Local-First Resilience</h2>
+          <p>
+            Retail counters in Nigeria frequently face network downtime and power outages. Booq is engineered with a <strong>local-first architecture</strong>:
+          </p>
+          <p>
+            Sales records and stock balances are written instantly to local offline storage before being queued for cloud sync. All data in transit between your phone and our cloud servers is encrypted using industry-standard TLS 1.3 encryption.
+          </p>
+        </section>
+
+        <!-- 7. Merchant Rights & Data Control -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">07.</span> Your Rights &amp; Data Control</h2>
+          <p>
+            In compliance with the <strong>Nigeria Data Protection Act (NDPA 2023)</strong> and the <strong>Nigeria Data Protection Regulation (NDPR)</strong>, you retain full rights over your data:
+          </p>
+          <ul>
+            <li><strong>Right to Access:</strong> You may request a copy of all personal and merchant data associated with your account.</li>
+            <li><strong>Right to Rectification:</strong> You may update or correct your shop details or phone number at any time.</li>
+            <li><strong>Right to Erasure (Deletion):</strong> You may request complete deletion of your waitlist record, order history, or merchant account.</li>
+            <li><strong>Right to Withdraw Consent:</strong> You may unsubscribe from launch announcements at any time with a single click or email.</li>
+          </ul>
+        </section>
+
+        <!-- 8. Children’s Privacy -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">08.</span> Children’s Privacy</h2>
+          <p>
+            Booq is intended exclusively for retail businesses, store operators, and adult merchants. We do not knowingly collect personal data from individuals under 18 years of age.
+          </p>
+        </section>
+
+        <!-- 9. Updates to this Policy -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">09.</span> Updates to This Policy</h2>
+          <p>
+            As Booq introduces new hardware accessories and capabilities (such as barcode scanners, thermal receipt syncing, and team roles), we may update this Privacy Policy. Any changes will be posted on this page with an updated effective date.
+          </p>
+        </section>
+
+        <!-- 10. Contact Us -->
+        <section class="privacy-section">
+          <h2><span class="sec-num">10.</span> Contact &amp; Data Protection Officer</h2>
+          <p>
+            If you have questions regarding this Privacy Policy or wish to exercise your data rights, please contact our team:
+          </p>
+          <div class="privacy-highlight-box">
+            <strong>Booq Technologies Inc.</strong>
+            Email: <a href="mailto:hello@booq.ng" style="color:var(--color-sky-top); font-weight:700;">hello@booq.ng</a> / <a href="mailto:privacy@booq.africa" style="color:var(--color-sky-top); font-weight:700;">privacy@booq.africa</a><br>
+            Operations: Lagos · Abuja · Port Harcourt, Nigeria<br>
+            Website: <a href="https://booq.africa" style="color:var(--color-sky-top);">https://booq.africa</a>
+          </div>
+        </section>
+
+      </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="privacy-footer-nav">
+      <div>
+        © 2026 Booq Technologies Inc. Built for Nigerian retail merchants.
+      </div>
+      <div class="privacy-footer-links">
+        <a href="/">Home</a>
+        <a href="/#features">Features</a>
+        <a href="/#demo">Interactive Demo</a>
+        <a href="shop.html">Hardware (₦60k)</a>
+        <a href="/privacy">Privacy Policy</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
